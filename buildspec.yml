@@ -1,0 +1,41 @@
+<<<<<<< HEAD
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Install phase: nothing to install"
+  pre_build:
+    commands:
+      - echo "Pre-build phase: checking files"
+      - ls -la
+      - pwd
+  build:
+    commands:
+      - echo "Build phase"
+      - ls -la
+      - echo "Listing all files recursively:"
+      - find .
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
+=======
+version: 0.2 
+phases: 
+  install: 
+    commands: 
+      - echo "Install phase" 
+  pre_build: 
+    commands: 
+      - echo "Pre-build phase" 
+  build: 
+    commands: 
+      - ls 
+      - echo "Build phase complete" 
+artifacts: 
+  files: 
+    - s3site.html 
+  discard-paths: yes 
+>>>>>>> 7672347 (CLI generated buildspec with ls)
